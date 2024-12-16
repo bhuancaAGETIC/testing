@@ -1,22 +1,17 @@
-FROM node:18-bookworm
+# Usar una imagen base con Node.js
+FROM mcr.microsoft.com/playwright:v1.49.0-noble
 
+# Establecer el directorio de trabajo
+WORKDIR /app
 
-
-WORKDIR /usr/src/app
-
+# Copiar package.json y package-lock.json
 COPY package*.json ./
 
+# Instalar las dependencias
+RUN npm install
 
+# Copiar el resto de los archivos del proyecto
 COPY . .
 
-RUN npm install \ 
-    && npx playwright install-deps  \
-    && npx playwright install chromium \
-    && npx playwright install firefox 
-
-
-# Expose the port the app runs on
-EXPOSE 8082
-
-# Define the command to run the app
+# Ejecutar la prueba
 CMD ["npx", "playwright", "test"]
