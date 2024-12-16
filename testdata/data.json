@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "e2aec89df0d9469f9590a63e",
+    "NumeroDocumento": "729331931",
+    "Nombres": "JOAQUIN FRANCISCO",
+    "PrimerApellido": "BAUTISTA",
+    "SegundoApellido": "MENDEZ",
+    "FechaNacimiento": "09/08/1958",
+    "ComplementoVisible": 0,
+    "Complemento": "",
+    "LugarNacimientoPais": "BOLIVIA",
+    "LugarNacimientoDepartamento": "TARIJA",
+    "LugarNacimientoProvincia": "CERCADO",
+    "LugarNacimientoLocalidad": "CAMARGO",
+    "FechaExpiracion": "22/10/2050",
+    "Email": "78868533@yopmail.com",
+    "Telefono": "78868533"
+  },
+
+
+  {
+    "_id": "220320c4b47f4566be9b3bbc",
+    "NumeroDocumento": "712331948",
+    "Nombres": "ELVIRA PEREA",
+    "PrimerApellido": "PORRAS",
+    "SegundoApellido": "GRANDE",
+    "FechaNacimiento": "14/12/1967",
+    "ComplementoVisible": 0,
+    "Complemento": "",
+    "LugarNacimientoPais": "BOLIVIA",
+    "LugarNacimientoDepartamento": "TARIJA",
+    "LugarNacimientoProvincia": "CERCADO",
+    "LugarNacimientoLocalidad": "CAMARGO",
+    "FechaExpiracion": "22/10/2050",
+    "Email": "712331948@yopmail.com",
+    "Telefono": "712331948"
+  },
+  {
+    "_id": "075740871f874bda93a0e5d8",
+    "NumeroDocumento": "726027944",
+    "Nombres": "ROSA NURIA",
+    "PrimerApellido": "FUENTE",
+    "SegundoApellido": "CORDOBA",
+    "FechaNacimiento": "17/01/2006",
+    "ComplementoVisible": 0,
+    "Complemento": "",
+    "LugarNacimientoPais": "BOLIVIA",
+    "LugarNacimientoDepartamento": "TARIJA",
+    "LugarNacimientoProvincia": "CERCADO",
+    "LugarNacimientoLocalidad": "CAMARGO",
+    "FechaExpiracion": "22/10/2050",
+    "Email": "726027944@yopmail.com",
+    "Telefono": "726027944"
+  },
+  {
+    "_id": "258341d3379e4bddb1706895",
+    "NumeroDocumento": "784198658",
+    "Nombres": "DANIEL LLORET",
+    "PrimerApellido": "AROCA",
+    "SegundoApellido": "BOSCH",
+    "FechaNacimiento": "26/09/1996",
+    "ComplementoVisible": 0,
+    "Complemento": "",
+    "LugarNacimientoPais": "BOLIVIA",
+    "LugarNacimientoDepartamento": "TARIJA",
+    "LugarNacimientoProvincia": "CERCADO",
+    "LugarNacimientoLocalidad": "CAMARGO",
+    "FechaExpiracion": "22/10/2050",
+    "Email": "784198658@yopmail.com",
+    "Telefono": "784198658"
+  }
+  ]
+  
