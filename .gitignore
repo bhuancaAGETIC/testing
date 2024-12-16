@@ -4,4 +4,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/allure-report
-/playwright/allure-results
+
