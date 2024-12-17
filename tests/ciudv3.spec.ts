@@ -38,68 +38,68 @@ test('PRUEBA DE INICIO DE SESION', async ({ page }) => {
 });
 
 
-// test('PRUEBA DE REGISTRO PORTAL', async ({ page }) => {
-//   const loginPage = new LoginPage(page);
-//   const verificationPage = new VerificationPage(page);
-//   const dashboardPage = new DashboardPage(page);
+test('PRUEBA DE REGISTRO PORTAL', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const verificationPage = new VerificationPage(page);
+  const dashboardPage = new DashboardPage(page);
 
-//   await test.step('Navegar al portal de inicio de sesión', async () => {
-//     await loginPage.navegarAlPortal();
-//   });
+  await test.step('Navegar al portal de inicio de sesión', async () => {
+    await loginPage.navegarAlPortal();
+  });
 
-//   await test.step('Iniciar sesión con cédula y contraseña', async () => {
-//     await loginPage.iniciarSesion(process.env.CEDULA_ID || '', process.env.CONTRASENA || '');
-//   });
+  await test.step('Iniciar sesión con cédula y contraseña', async () => {
+    await loginPage.iniciarSesion(process.env.CEDULA_ID || '', process.env.CONTRASENA || '');
+  });
 
-//   await test.step('Seleccionar opción de verificación por correo electrónico', async () => {
-//     await verificationPage.seleccionarOpcionEmail();
-//   });
+  await test.step('Seleccionar opción de verificación por correo electrónico', async () => {
+    await verificationPage.seleccionarOpcionEmail();
+  });
 
-//   await test.step('Completar el código de verificación', async () => {
-//     await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
-//   });
+  await test.step('Completar el código de verificación', async () => {
+    await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
+  });
 
-//   await test.step('Verificar que el mensaje de bienvenida es visible', async () => {
-//     await expect(page.getByText('Bienvenid@')).toBeVisible();
-//   });
+  await test.step('Verificar que el mensaje de bienvenida es visible', async () => {
+    await expect(page.getByText('Bienvenid@')).toBeVisible();
+  });
 
-//   await test.step('Abrir página de perfil en una nueva ventana', async () => {
-//     const page2Promise = page.waitForEvent('popup');
-//     await page.getByRole('button', { name: 'Ver Perfil' }).click();
-//     const page2 = await page2Promise;
-//   });
+  await test.step('Abrir página de perfil en una nueva ventana', async () => {
+    const page2Promise = page.waitForEvent('popup');
+    await page.getByRole('button', { name: 'Ver Perfil' }).click();
+    const page2 = await page2Promise;
+  });
 
-//   // await loginPage.navegarAlPortal();
+  // await loginPage.navegarAlPortal();
 
-//   // await dashboardPage.validarDatosBienvenida();
+  // await dashboardPage.validarDatosBienvenida();
 
-//   // await dashboardPage.validarDatosPersonales();
+  // await dashboardPage.validarDatosPersonales();
 
-//   // await dashboardPage.modificarDatosPersonales();
-//   // await dashboardPage.cerrarModal();
+  // await dashboardPage.modificarDatosPersonales();
+  // await dashboardPage.cerrarModal();
 
-//   // await dashboardPage.validarDatosContacto();
+  // await dashboardPage.validarDatosContacto();
 
-//   // await dashboardPage.editarCorreoElectronico();
-//   // await dashboardPage.cerrarModal2();
+  // await dashboardPage.editarCorreoElectronico();
+  // await dashboardPage.cerrarModal2();
   
-//   // await dashboardPage.editarTelefono();
-//   // await dashboardPage.cerrarModal2();
+  // await dashboardPage.editarTelefono();
+  // await dashboardPage.cerrarModal2();
 
-//   // await dashboardPage.validarDatosSeguridad();
+  // await dashboardPage.validarDatosSeguridad();
 
-//   // await dashboardPage.validarDatosSeguridad();
-//   // await dashboardPage.editarContrasena();
-//   // await dashboardPage.cerrarModal2();
+  // await dashboardPage.validarDatosSeguridad();
+  // await dashboardPage.editarContrasena();
+  // await dashboardPage.cerrarModal2();
 
-//   // await dashboardPage.irAHistorialDeSolicitudes();
-//   // await dashboardPage.irAPerfil();
-//   // await dashboardPage.interactuarConMenu();
-//   // await dashboardPage.cerrarSesion();
+  // await dashboardPage.irAHistorialDeSolicitudes();
+  // await dashboardPage.irAPerfil();
+  // await dashboardPage.interactuarConMenu();
+  // await dashboardPage.cerrarSesion();
 
-//   // await expect(page.getByRole('button', { name: 'Ingresa con Ciudadanía' })).toBeVisible(); 
+  // await expect(page.getByRole('button', { name: 'Ingresa con Ciudadanía' })).toBeVisible(); 
 
-// });
+});
 
 
 // test('PRUEBA REGISTRO', async ({ page }) => {
