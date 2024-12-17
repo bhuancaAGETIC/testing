@@ -269,7 +269,7 @@ test('PRUEBA DE REGISTRO PORTAL', async ({ page }) => {
 
 
   
-});
+// });
 
 
 // test(' PRUEBA REGISTRO ADMIN', async ({ page }) => {
