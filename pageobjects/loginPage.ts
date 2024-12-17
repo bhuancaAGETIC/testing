@@ -8,6 +8,7 @@ export class LoginPage {
   }
 
   async navegarAlPortal(): Promise<void> {
+
     const url = process.env.PORTAL_URL || '';
     await this.page.goto(url);
   }

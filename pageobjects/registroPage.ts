@@ -9,6 +9,7 @@ export class RegistroPage {
   }
 
   async navegarARegistro(): Promise<void> {
+
     const url = process.env.REGISTRO_URL || '';
     await this.page.goto(url);
   }
