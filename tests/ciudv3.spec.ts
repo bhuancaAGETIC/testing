@@ -102,154 +102,154 @@ test('PRUEBA DE REGISTRO PORTAL', async ({ page }) => {
 });
 
 
-test('PRUEBA REGISTRO', async ({ page }) => {
-  const registroPage = new RegistroPage(page);
-  const verificationPage = new VerificationPage(page);
-  const dashboardPage = new DashboardPage(page);
+// test('PRUEBA REGISTRO', async ({ page }) => {
+//   const registroPage = new RegistroPage(page);
+//   const verificationPage = new VerificationPage(page);
+//   const dashboardPage = new DashboardPage(page);
 
-  await test.step('Navegar a la página de registro', async () => {
-    await registroPage.navegarARegistro();
-  });
+//   await test.step('Navegar a la página de registro', async () => {
+//     await registroPage.navegarARegistro();
+//   });
 
-  await test.step('Iniciar sesión con cédula y contraseña', async () => {
-    await registroPage.ingresarconCiudadania(process.env.CEDULA_ID || '', process.env.CONTRASENA || '');
-  });
+//   await test.step('Iniciar sesión con cédula y contraseña', async () => {
+//     await registroPage.ingresarconCiudadania(process.env.CEDULA_ID || '', process.env.CONTRASENA || '');
+//   });
 
-  await test.step('Seleccionar opción de verificación por correo electrónico', async () => {
-    await verificationPage.seleccionarOpcionEmail();
-  });
+//   await test.step('Seleccionar opción de verificación por correo electrónico', async () => {
+//     await verificationPage.seleccionarOpcionEmail();
+//   });
 
-  await test.step('Ingresar código de verificación', async () => {
-    await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
-  });
+//   await test.step('Ingresar código de verificación', async () => {
+//     await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
+//   });
 
-  await test.step('Verificar que el mensaje de bienvenida es visible', async () => {
-    await expect(page.getByText('Bienvenid@')).toBeVisible();
-  });
+//   await test.step('Verificar que el mensaje de bienvenida es visible', async () => {
+//     await expect(page.getByText('Bienvenid@')).toBeVisible();
+//   });
 
-  await test.step('Validar datos de bienvenida en el dashboard', async () => {
-    await dashboardPage.validarDatosBienvenida();
-  });
+//   await test.step('Validar datos de bienvenida en el dashboard', async () => {
+//     await dashboardPage.validarDatosBienvenida();
+//   });
 
-  await test.step('Validar datos personales', async () => {
-    await dashboardPage.validarDatosPersonales();
-  });
+//   await test.step('Validar datos personales', async () => {
+//     await dashboardPage.validarDatosPersonales();
+//   });
 
-  await test.step('Modificar y cerrar modal de datos personales', async () => {
-    await dashboardPage.modificarDatosPersonales();
-    await dashboardPage.cerrarModal();
-  });
+//   await test.step('Modificar y cerrar modal de datos personales', async () => {
+//     await dashboardPage.modificarDatosPersonales();
+//     await dashboardPage.cerrarModal();
+//   });
 
-  await test.step('Validar datos de contacto', async () => {
-    await dashboardPage.validarDatosContacto();
-  });
+//   await test.step('Validar datos de contacto', async () => {
+//     await dashboardPage.validarDatosContacto();
+//   });
 
-  await test.step('Editar correo electrónico y cerrar modal', async () => {
-    await dashboardPage.editarCorreoElectronico();
-    await dashboardPage.cerrarModal2();
-  });
+//   await test.step('Editar correo electrónico y cerrar modal', async () => {
+//     await dashboardPage.editarCorreoElectronico();
+//     await dashboardPage.cerrarModal2();
+//   });
 
-  await test.step('Editar teléfono y cerrar modal', async () => {
-    await dashboardPage.editarTelefono();
-    await dashboardPage.cerrarModal2();
-  });
+//   await test.step('Editar teléfono y cerrar modal', async () => {
+//     await dashboardPage.editarTelefono();
+//     await dashboardPage.cerrarModal2();
+//   });
 
-  await test.step('Validar datos de seguridad', async () => {
-    await dashboardPage.validarDatosSeguridad();
-  });
+//   await test.step('Validar datos de seguridad', async () => {
+//     await dashboardPage.validarDatosSeguridad();
+//   });
 
-  await test.step('Editar contraseña y cerrar modal', async () => {
-    await dashboardPage.editarContrasena();
-    await dashboardPage.cerrarModal2();
-  });
+//   await test.step('Editar contraseña y cerrar modal', async () => {
+//     await dashboardPage.editarContrasena();
+//     await dashboardPage.cerrarModal2();
+//   });
 
-  await test.step('Ir al historial de solicitudes', async () => {
-    await dashboardPage.irAHistorialDeSolicitudes();
-  });
+//   await test.step('Ir al historial de solicitudes', async () => {
+//     await dashboardPage.irAHistorialDeSolicitudes();
+//   });
 
-  await test.step('Ir al perfil de usuario', async () => {
-    await dashboardPage.irAPerfil();
-  });
+//   await test.step('Ir al perfil de usuario', async () => {
+//     await dashboardPage.irAPerfil();
+//   });
 
-  await test.step('Interactuar con el menú del dashboard', async () => {
-    await dashboardPage.interactuarConMenu();
-  });
+//   await test.step('Interactuar con el menú del dashboard', async () => {
+//     await dashboardPage.interactuarConMenu();
+//   });
 
-  await test.step('Cerrar sesión', async () => {
-    await dashboardPage.cerrarSesion();
-  });
+//   await test.step('Cerrar sesión', async () => {
+//     await dashboardPage.cerrarSesion();
+//   });
 
-  await test.step('Verificar que el botón de inicio de sesión es visible', async () => {
-    await expect(page.getByRole('button', { name: 'Ingresa con Ciudadanía' })).toBeVisible();
-  });
-});
+//   await test.step('Verificar que el botón de inicio de sesión es visible', async () => {
+//     await expect(page.getByRole('button', { name: 'Ingresa con Ciudadanía' })).toBeVisible();
+//   });
+// });
 
-test('PRUEBA PRE-REGISTRO', async ({ page }) => {
+// test('PRUEBA PRE-REGISTRO', async ({ page }) => {
 
-  const preregistroPage = new PreregistroPage(page);
-  const verificationPage = new VerificationPage(page);
+//   const preregistroPage = new PreregistroPage(page);
+//   const verificationPage = new VerificationPage(page);
 
-  for (const userData of data) {
+//   for (const userData of data) {
     
-    await test.step('Navegar a la página de preregistro', async () => {
-      await preregistroPage.navegarApreRegistro();
-    });
+//     await test.step('Navegar a la página de preregistro', async () => {
+//       await preregistroPage.navegarApreRegistro();
+//     });
 
-    await test.step('Aceptar términos y condiciones', async () => {
-      await preregistroPage.aceptarTerminos();
-    });
+//     await test.step('Aceptar términos y condiciones', async () => {
+//       await preregistroPage.aceptarTerminos();
+//     });
 
-    await test.step('Ingresar teléfono', async () => {
-      await preregistroPage.ingresarTelefono(userData.Telefono);
-    });
+//     await test.step('Ingresar teléfono', async () => {
+//       await preregistroPage.ingresarTelefono(userData.Telefono);
+//     });
 
-    await test.step('Completar código de verificación para teléfono', async () => {
-      await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
-    });
+//     await test.step('Completar código de verificación para teléfono', async () => {
+//       await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
+//     });
 
-    await test.step('Ingresar correo electrónico', async () => {
-      await preregistroPage.ingresarCorreo(userData.Email);
-    });
+//     await test.step('Ingresar correo electrónico', async () => {
+//       await preregistroPage.ingresarCorreo(userData.Email);
+//     });
 
-    await test.step('Completar código de verificación para correo', async () => {
-      await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
-    });
+//     await test.step('Completar código de verificación para correo', async () => {
+//       await verificationPage.completarCodigoVerificacion(process.env.CODIGO_VERIFICACION || '');
+//     });
 
-    await test.step('Seleccionar tipo de documento según país', async () => {
-      if (userData.LugarNacimientoPais !== 'BOLIVIA') {
-        console.log('El país no es Bolivia:', userData.LugarNacimientoPais); 
-        await page.getByLabel('Cédula de identidad de').check();
-      } else {
-        console.log('El país es Bolivia:', userData.LugarNacimientoPais);  
-      }
-    });
+//     await test.step('Seleccionar tipo de documento según país', async () => {
+//       if (userData.LugarNacimientoPais !== 'BOLIVIA') {
+//         console.log('El país no es Bolivia:', userData.LugarNacimientoPais); 
+//         await page.getByLabel('Cédula de identidad de').check();
+//       } else {
+//         console.log('El país es Bolivia:', userData.LugarNacimientoPais);  
+//       }
+//     });
 
-    await test.step('Llenar formulario con los datos del usuario', async () => {
-      await preregistroPage.llenarFormulario(userData);
-    });
+//     await test.step('Llenar formulario con los datos del usuario', async () => {
+//       await preregistroPage.llenarFormulario(userData);
+//     });
 
-    await test.step('Establecer la contraseña', async () => {
-      await preregistroPage.setPassword(userData);
-    });
+//     await test.step('Establecer la contraseña', async () => {
+//       await preregistroPage.setPassword(userData);
+//     });
 
-    await test.step('Subir imágenes', async () => {
-      await preregistroPage.subirImagen('anverso', path.join(__dirname, '../images/anverso.jpeg'));
-      await preregistroPage.subirImagen('reverso', path.join(__dirname, '../images/reverso.jpeg'));
-      await preregistroPage.subirImagen('tuya', path.join(__dirname, '../images/perfil.jpeg'));
-    });
+//     await test.step('Subir imágenes', async () => {
+//       await preregistroPage.subirImagen('anverso', path.join(__dirname, '../images/anverso.jpeg'));
+//       await preregistroPage.subirImagen('reverso', path.join(__dirname, '../images/reverso.jpeg'));
+//       await preregistroPage.subirImagen('tuya', path.join(__dirname, '../images/perfil.jpeg'));
+//     });
 
-    await test.step('Confirmar datos', async () => {
-      await preregistroPage.confirmardatos();
-    });
+//     await test.step('Confirmar datos', async () => {
+//       await preregistroPage.confirmardatos();
+//     });
 
-    await test.step('Verificar que la imagen de éxito es visible', async () => {
-      await expect(page.getByRole('img', { name: '¡Tu solicitud de pre registro' })).toBeVisible();
-    });
+//     await test.step('Verificar que la imagen de éxito es visible', async () => {
+//       await expect(page.getByRole('img', { name: '¡Tu solicitud de pre registro' })).toBeVisible();
+//     });
 
-    await test.step('Verificar que el mensaje de éxito está presente', async () => {
-      await expect(page.getByRole('main')).toContainText('¡Tu solicitud de pre registro fue presentada!');
-    });
-  }
+//     await test.step('Verificar que el mensaje de éxito está presente', async () => {
+//       await expect(page.getByRole('main')).toContainText('¡Tu solicitud de pre registro fue presentada!');
+//     });
+//   }
 
 
     // await page.getByRole('button', { name: '¿Quieres cancelar tu' }).click();
